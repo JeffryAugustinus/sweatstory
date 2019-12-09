@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head', { css: 'create.css' }) %>
+  </head>
+  <body>
+   <!-- <%- include('../components/navbar.ejs', { email: user.email }) %>-->
+    <div class="container" id="container">
+          <form>
+            <span>Pour your journey below</span>
+            <input id="postTitle" type="text" placeholder="Journey title" />
+            <textarea rows="10" cols="65"class="body" id="postBody" type="text" placeholder="Journey content"></textarea>
+            <button id="createButton" >Submit</button>
+          </form>
+        
+    </div>
+    <script src="/js/logout.js"></script>
+    <script src="/js/create.js"></script>
+  </body>
+</html>

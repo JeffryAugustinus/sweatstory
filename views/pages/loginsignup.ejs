@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <%- include('../partials/head', { css: 'loginsignup.css' }) %>
+  </head>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fa fa-facebook" ></i></a>
+				<a href="#" class="social"><i class="fa fa-instagram"></i></a>
+				<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input id="email" type="email" placeholder="Email" />
+			<input id="password" type="password" placeholder="Password" />
+			<button id="signupButton" >Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="social"><i class="fa fa-instagram"></i></a>
+				<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input id="loginEmail" type="email" placeholder="Email" />
+			<input id="loginPassword" type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button id="loginButton" >Log In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Our Bud is Back!</h1>
+				<p>Login with your personal info to keep connected with us</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Buddy!</h1>
+				<p>Let's refresh your day with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/loginsignup.js"></script>
+</body> 
