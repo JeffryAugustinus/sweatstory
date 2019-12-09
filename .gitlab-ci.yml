@@ -1,4 +1,4 @@
-status:
+stages:
   - deploy
   
 deploy-to-heroku:
