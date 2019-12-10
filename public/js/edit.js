@@ -1,4 +1,4 @@
-$("#editButton").click(function() {
+$("#updateButton").click(function() {
     let title = $("#updateTitle").val();
     let body = $("#updateBody").val();
   
