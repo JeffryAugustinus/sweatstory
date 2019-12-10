@@ -11,19 +11,21 @@
   <% if (showButton) { %>
     <div class="button">
       <button id="button-<%= post._id %>" onclick="location.href = '/destroy/<%= post._id %>'">Delete</button>
+      <button onclick="myFunction()">Update</button>
     </div>
   <!--Update-->
-  <div class="container" id="container">
-    <form class="updateContainer" id="updateContainer">
-      <input id="updateTitle" type="text" placeholder="Update journey title" />
+  <div class="updateContainer" id="updateContainer">
+    <form class="updateContainer" id="updateForm" autocomplete="off">
+      <input id="updateTitle" type="text"  placeholder="Update journey title" />
       <textarea rows="10" cols="65"class="body" id="updateBody" type="text" placeholder="Update Journey content"></textarea>
-      <button id="updateButton">Update</button>
+      <button class="button" id="updateButton">Update it!</button>
     </form>
   
-</div>
+  </div>
   <% } %>
 </div>
 <script>
+//Update feature
   $("#updateButton").click(function() {
     let title = $("#updateTitle").val();
     let body = $("#updateBody").val();
@@ -55,4 +57,19 @@
         alert('Failed to update post!')
       })
   })
+// Hide show update
+  var y = document.getElementById("updateContainer");
+  y.style.display = "none";
+
+  function myFunction() {
+  var x = document.getElementById("updateContainer");
+  console.log(x.style.display) 
+  if (x.style.display == "none") {
+    x.style.display = "";
+    console.log(x.style.display)
+  } else {
+    x.style.display = "none";
+  }
+}
+
 </script>
