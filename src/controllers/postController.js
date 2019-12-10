@@ -27,6 +27,17 @@ module.exports = {
       })
   },
 
+  edit: function(req, res) {
+    req.body.user = req.headers.authorization._id
+    Post.findByIdAndUpdate(req.params._id, req.body)
+      .then(data => {
+        response(res, [true, data], 200);
+      })
+      .catch(err => {
+        response(res, [false, err], 422)
+      })
+  },
+
   show: function(req, res) {
     Post.findById(req.params._id).select(["_id","title","body", "created_at","user"]).populate({
       path: "user",
