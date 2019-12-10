@@ -1,0 +1,3 @@
+DB_CONNECTION = 'mongodb://localhost/example'
+BASE_URL = "127.0.0.1:8000"
+SECRET_KEY = "INI RAHASIA"
